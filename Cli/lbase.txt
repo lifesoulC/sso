@@ -1,8 +1,0 @@
-{
-	"addr": "1-5",
-	"name": "广州vm",
-    "location":"广州",
-    "hosttype": "sl",
-    "ip":"345.6.6.6"
-
-}
