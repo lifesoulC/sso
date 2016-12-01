@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description"  />
+ <link rel="stylesheet" href="/static/css/semantic.min.css"/>
+    <script src="/static/js/lib.min.js"></script>
+    <script src="/static/js/md5.js"></script>
+    <style>
+        *{ font:12pt Verdana,Arial,Microsoft YaHei,sans-serif; color:#666666; word-wrap:break-word;}
+        #screen{margin:0 auto; width:1500px; margin-top:100px; }
+        .field label {font-weight: bold;}
+        .ui.message .header {font-size: 1em;}
+    </style>
+<style type="text/css">
+body{background:#FFFFFF;}
+</style>
+<script type="text/javascript">
+function add(){
+ var oTr = document.getElementById("addtr").rows[1];
+ var newTr = oTr.cloneNode(true);
+ document.getElementById("addtr").getElementsByTagName("tbody")[0].appendChild(newTr);
+ newTr.cells[0].firstChild.value = newTr.rowIndex;
+ document.getElementById("b1").disabled = newTr.rowIndex ==9 ;
+}
+</script>
+</head>
+<body>
+<form class="form-horizontal" style="margin-top:100px;" role="form" method="post" action="/nodelink">
+<div style="font-size:15px;margin-top:100px;">
+<table  class="table table-hover text-center" style="width:50%;margin:auto" id="addtr">
+  <tr>
+    <td height="30" align="center" bgcolor="#CCCCCC">ID</td>
+    <td  align="center" bgcolor="#CCCCCC">srcAddr</td>
+    <td  align="center" bgcolor="#CCCCCC">srcIPv4</td>
+    <td  align="center" bgcolor="#CCCCCC">dstAddr</td>
+	<td  align="center" bgcolor="#CCCCCC">dstIPv4</td>
+	<td  align="center" bgcolor="#CCCCCC">flowLevel</td>
+  </tr>
+  </br>
+  <tr>
+    <td  height="30" align="center"><input type="text" id = "ids" name="ids" size="1" value="1" /></td>
+    <td  align="center"><input type="text" size="16" id = "srcAddr" name="srcAddr" /></td>
+	<td  align="center"><input type="text" size="16" id = "srcIPv4" name="srcIPv4" /></td>
+	<td  align="center"><input type="text" size="16" id = "dstAddr" name="dstAddr" /></td>
+	<td  align="center"><input type="text" size="16" id = "dstIPv4" name="dstIPv4" /></td>
+
+    <td align="center">
+      <select name="flowLevel" id = "flowLevel" name="flowLevel">
+       <option value=1>1</option>
+       <option value=2>2</option>
+       <option value=3>3</option>
+      </select>
+    </td> 
+  </tr>
+</table>
+<div >
+ <table align="center">
+<tr><td><input   class="btn btn-primary" type="button" id="b1" value="ADD" onclick="add()" style='margin:auto;' />
+            <button type="submit" class="btn btn-primary">确定设置</button>
+ 
+</td></tr>
+ </table>
+</div>
+</div>
+</form>
+
+
+</body>
+</html>

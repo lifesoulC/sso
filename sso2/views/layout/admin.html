@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>后台</title>
+        <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="screen">
+            <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">SSO后台</a>
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/add">添加新用户</a></li>
+                            <li><a href="/show">显示所有用户</a></li>
+							<li><a href="/goto">跳转页面</a></li>
+							<li><a href="/addrole">添加小组</a></li>
+                            <li><a href="/logout">退出登陆</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {{.LayoutContent}}  <!--显示TplName-->
+        </div>
+    </body>
+</html>

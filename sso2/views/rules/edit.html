@@ -1,0 +1,61 @@
+<form class="form-horizontal" style="margin-top:100px;" role="form" method="post" action="/edit">
+    	 
+
+	<div class="form-group"> 
+         <label for="ident" class="col-sm-4 control-label">用户名*(不可更改)：</label> 
+		<div class="col-sm-2">
+		 <input class="form-control" type="text" id="name" name="name" value="{{.content.Name}}"> 
+		</div>
+    </div> 
+	 <div class="form-group">
+        <label for="ident" class="col-sm-4 control-label">密码：</label>
+
+        <div class="col-sm-2">
+            <input class="form-control" id="password" name="password" value="{{.content.Password}}">
+        </div>
+    </div>
+	
+    <div class="form-group">
+        <label for="ident" class="col-sm-4 control-label">邮箱：</label>
+
+        <div class="col-sm-2">
+            <input class="form-control" id="email" name="email" value="{{.content.Email}}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="ident" class="col-sm-4 control-label">级别：</label>
+
+        <div class="col-sm-2">		
+			<select class="form-control" id="level" name="level">  
+			 <option value="1" selected="selected">管理员</option>  
+			 <option value="2">用户</option>  
+			</select> 
+
+        </div>
+
+    </div>
+	
+	<div class="form-group">
+        <label for="ident" class="col-sm-4 control-label">组：</label>
+
+        <div class="col-sm-2">
+			<input class="form-control" id="role" name="role" value="{{.content.Role}}">
+        </div>
+
+    </div>
+	
+	 <div class="form-group">
+        <label for="ident" class="col-sm-4 control-label">电话：</label>
+
+        <div class="col-sm-2">
+            <input class="form-control" id="phone" name="phone" value="{{.content.Phone}}">
+        </div>
+    </div>
+	
+    <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-4">
+            <button type="submit" class="btn btn-primary">确定修改</button>
+        </div>
+    </div>
+</form>
